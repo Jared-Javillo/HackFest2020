@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 class ProfileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Column(
       // body
-      child: Column(
         children: [
           Container(
             // DP frame
@@ -117,7 +116,6 @@ class ProfileWidget extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
+      );
   }
 }

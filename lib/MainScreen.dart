@@ -1,6 +1,7 @@
 import 'dart:ffi';
 import 'dart:ui';
 
+import 'package:HackFest2020/FindMentorWidget.dart';
 import 'package:flutter/material.dart';
 import 'ProfileWidget.dart';
 
@@ -15,7 +16,7 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> _views =
       <Widget>[
         ProfileWidget(),
-        Text('Find Mentor'),
+        FindMentorWidget(),
         Text('Find Mentee'),
         Text('Chat'),
       ];
@@ -59,34 +60,11 @@ class _MainScreenState extends State<MainScreen> {
                   top: Radius.circular(10.0),
                 ),
               ),
-              child: Column(
-                children: [
-                  Container(
-                    // DP frame
-                    margin: EdgeInsets.only(
-                      top: 50,
-                      bottom: 10,
-                    ),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color(0xFFCFCFCF),
-                            spreadRadius: 3,
-                            blurRadius: 7,
-                          )
-                        ]),
-                    child: Image(
-                      image: AssetImage('assets/images/monika.png'),
-                      width: 190,
-                      height: 190,
-                    ),
-                  ),
-                ],
-              ),
+
+              // put widgets here for navbar testing
+
               // use next line to test navbar functionality
-              // child: _views.elementAt(_selectedIndex),
+              child: _views.elementAt(_selectedIndex),
             ),
           ),
         ),
@@ -110,7 +88,7 @@ class _MainScreenState extends State<MainScreen> {
               label: 'Find a Mentee',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.mail),
+              icon: Icon(Icons.chat_bubble),
               label: 'Chat',
             ),
           ],
