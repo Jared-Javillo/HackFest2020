@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
         title: 'Akay',
         theme: ThemeData(
           fontFamily: 'RedHatDisplay',
-          primarySwatch: Colors.teal,
+          primaryColor: Color(0xFF1D6260),
+          accentColor: Color(0xFFA0E7E5),
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         home: MainScreen());
