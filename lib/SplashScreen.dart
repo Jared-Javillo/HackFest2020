@@ -30,7 +30,11 @@ class _SplashScreenState extends State<SplashScreen> {
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [Color(0xFFFBE7C6), Color(0xFF1D6260)])),
+              colors: [
+            Color(0xFFFBE7C6),
+            Color(0xFFCDFADB),
+            Color(0xFF1D6260)
+          ])),
       child: Center(
         child: Image(
           image: AssetImage('assets/images/akay_logo.png'),
