@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+import './MainScreen.dart';
 
 class LogInScreen extends StatefulWidget {
   LogInScreen({Key key}) : super(key: key);
@@ -70,7 +73,13 @@ class _LogInScreenState extends State<LogInScreen> {
                   width: ScreenUtil().setWidth(800),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(primary: Color(0xFFA0E7E5)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MainScreen()));
+                    },
                     child: Text(
                       "LOG IN",
                       style: TextStyle(
@@ -82,12 +91,13 @@ class _LogInScreenState extends State<LogInScreen> {
                   ),
                 ),
                 Container(
+                  height: ScreenUtil().setHeight(50),
                   width: ScreenUtil().setWidth(800),
                   alignment: Alignment.bottomCenter,
                   child: Text(
                     "Create an Account",
                     style: TextStyle(
-                      fontSize: ScreenUtil().setSp(40),
+                      fontSize: ScreenUtil().setSp(50),
                       fontFamily: "RedHatFamily",
                       color: Colors.white,
                     ),
@@ -114,3 +124,5 @@ class _LogInScreenState extends State<LogInScreen> {
     );
   }
 }
+
+
