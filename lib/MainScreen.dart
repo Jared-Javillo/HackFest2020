@@ -1,9 +1,9 @@
 import 'dart:ui';
 
-import 'package:Akay/FindMenteeWidget.dart';
 import 'package:flutter/material.dart';
 
 import './MentorFindPage.dart';
+import './MenteeFindPage.dart';
 import './ProfileWidget.dart';
 import './SettingsScreen.dart';
 
@@ -17,7 +17,7 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> _views = <Widget>[
     ProfileWidget(),
     MentorsFindPage(),
-    Text('Under Construction'),
+    MenteeFindPage(),
     Text('Chat'),
   ];
 

@@ -27,7 +27,7 @@ class _FindMentorWidgetState extends State<FindMentorWidget> {
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [Color(0xFFFBE7C6), Color(0xFFCDFADB), Color(0xFF1D6260)],
+              colors: [Color(0xFF1D6260), Color(0xFFCDFADB), Color(0xFFFBE7C6)],
             ),
             borderRadius: BorderRadius.circular(20),
           ),
