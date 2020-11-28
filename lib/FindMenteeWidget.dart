@@ -22,7 +22,7 @@ class FindMenteeWidget extends StatelessWidget {
                 )
               ]),
           child: Image(
-            image: AssetImage('assets/images/monika.png'),
+            image: AssetImage('assets/images/sayori.png'),
             width: 190,
             height: 190,
           ),
@@ -35,7 +35,7 @@ class FindMenteeWidget extends StatelessWidget {
           ),
         ),
         Text(
-          'Monika',
+          'Sayori',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 35,

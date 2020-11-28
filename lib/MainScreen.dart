@@ -1,11 +1,12 @@
 import 'dart:ffi';
 import 'dart:ui';
 
+import 'package:HackFest2020/ChatListWidget.dart';
 import 'package:flutter/material.dart';
 import 'ProfileWidget.dart';
 import 'FindMentorWidget.dart';
 import 'FindMenteeWidget.dart';
-// import 'ChatListWidget.dart';
+import 'ChatListWidget.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -18,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
     ProfileWidget(),
     FindMentorWidget(),
     FindMenteeWidget(),
-    Text('Chat'),
+    ChatListWidget(),
   ];
 
   void _onNavItemTapped(int index) {
@@ -70,78 +71,9 @@ class _MainScreenState extends State<MainScreen> {
             ),
 
             // put widgets as children of Container here for navbar testing
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(
-                        left: 20,
-                        right: 25,
-                      ),
-                      child: Container(
-                        // DP frame
-                        margin: EdgeInsets.only(
-                          top: 20,
-                          bottom: 10,
-                        ),
-                        child: CircleAvatar(
-                          backgroundImage:
-                              AssetImage('assets/images/monika.png'),
-                          backgroundColor: Colors.white,
-                          radius: 40,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      'Chats',
-                      style: TextStyle(
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                        color: Theme.of(context).primaryColor,
-                      )
-                    )
-                  ],
-                ),
-                Container(
-                  margin: EdgeInsets.all(30),
-                  child: Column(
-                    // Chats
-                    children: [
-                      Container(
-                        margin: EdgeInsets.only(
-                          bottom: 20,
-                        ),// each Container is a chat
-                        child: Row(
-                          children: [
-                            CircleAvatar(
-                              backgroundImage: AssetImage('assets/images/monika.png'),
-                              backgroundColor: Colors.white,
-                              radius: 30,
-                            ),
-                            Text('Monika'),
-                          ],
-                        ),
-                      ),
-                      Container( // each Container is a chat
-                        child: Row(
-                          children: [
-                            CircleAvatar(
-                              backgroundImage: AssetImage('assets/images/sayori.png'),
-                              backgroundColor: Colors.white,
-                              radius: 30,
-                            ),
-                            Text('Sayori'),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+
             // use next line to test navbar functionality
-            // child: _views.elementAt(_selectedIndex),
+            child: _views.elementAt(_selectedIndex),
           ),
         ),
       ),

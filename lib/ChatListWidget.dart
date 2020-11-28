@@ -41,10 +41,11 @@ class ChatListWidget extends StatelessWidget {
           child: Column(
             // Chats
             children: [
-              Container(
+              Container( // each Container is a chat
                 margin: EdgeInsets.only(
-                  bottom: 20,
-                ),// each Container is a chat
+                  top: 5,
+                  bottom: 5,
+                ),
                 child: Row(
                   children: [
                     CircleAvatar(
@@ -56,7 +57,12 @@ class ChatListWidget extends StatelessWidget {
                   ],
                 ),
               ),
+              Divider(),
               Container( // each Container is a chat
+                margin: EdgeInsets.only(
+                  top: 5,
+                  bottom: 5,
+                ),
                 child: Row(
                   children: [
                     CircleAvatar(
@@ -68,6 +74,75 @@ class ChatListWidget extends StatelessWidget {
                   ],
                 ),
               ),
+              Divider(),
+              Container( // each Container is a chat
+                margin: EdgeInsets.only(
+                  top: 5,
+                  bottom: 5,
+                ),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: AssetImage('assets/images/monika.png'),
+                      backgroundColor: Colors.white,
+                      radius: 30,
+                    ),
+                    Text('Monika'),
+                  ],
+                ),
+              ),
+              Divider(),
+              Container( // each Container is a chat
+                margin: EdgeInsets.only(
+                  top: 5,
+                  bottom: 5,
+                ),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: AssetImage('assets/images/sayori.png'),
+                      backgroundColor: Colors.white,
+                      radius: 30,
+                    ),
+                    Text('Sayori'),
+                  ],
+                ),
+              ),
+              Divider(),
+              Container( // each Container is a chat
+                margin: EdgeInsets.only(
+                  top: 5,
+                  bottom: 5,
+                ),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: AssetImage('assets/images/monika.png'),
+                      backgroundColor: Colors.white,
+                      radius: 30,
+                    ),
+                    Text('Monika'),
+                  ],
+                ),
+              ),
+              Divider(),
+              Container( // each Container is a chat
+                margin: EdgeInsets.only(
+                  top: 5,
+                  bottom: 5,
+                ),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: AssetImage('assets/images/sayori.png'),
+                      backgroundColor: Colors.white,
+                      radius: 30,
+                    ),
+                    Text('Sayori'),
+                  ],
+                ),
+              ),
+              Divider(),
             ],
           ),
         ),
