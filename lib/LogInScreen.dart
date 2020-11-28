@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import './MainScreen.dart';
+
 class LogInScreen extends StatefulWidget {
   LogInScreen({Key key}) : super(key: key);
   @override
@@ -70,7 +72,13 @@ class _LogInScreenState extends State<LogInScreen> {
                   width: ScreenUtil().setWidth(800),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(primary: Color(0xFFA0E7E5)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MainScreen()));
+                    },
                     child: Text(
                       "LOG IN",
                       style: TextStyle(
@@ -82,6 +90,7 @@ class _LogInScreenState extends State<LogInScreen> {
                   ),
                 ),
                 Container(
+                  height: ScreenUtil().setHeight(50),
                   width: ScreenUtil().setWidth(800),
                   alignment: Alignment.bottomCenter,
                   child: Text(

@@ -1,12 +1,9 @@
-import 'dart:ffi';
 import 'dart:ui';
 
-import 'package:HackFest2020/ChatListWidget.dart';
 import 'package:flutter/material.dart';
-import 'ProfileWidget.dart';
-import 'FindMentorWidget.dart';
-import 'FindMenteeWidget.dart';
-import 'ChatListWidget.dart';
+
+import './FindMentorWidget.dart';
+import './ProfileWidget.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -18,8 +15,8 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> _views = <Widget>[
     ProfileWidget(),
     FindMentorWidget(),
-    FindMenteeWidget(),
-    ChatListWidget(),
+    Text('Find Mentee'),
+    Text('Chat'),
   ];
 
   void _onNavItemTapped(int index) {
@@ -28,26 +25,17 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 
-  FloatingActionButton _buildMenuButton(int index) {
-    FloatingActionButton fab;
-    if (index != 3) {
-      fab = FloatingActionButton(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
+      floatingActionButton: FloatingActionButton(
         onPressed: () {},
         elevation: 0,
         mini: true,
         child: Icon(Icons.menu),
-      );
-    }
-    return fab;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: _buildMenuButton(_selectedIndex),
-      floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
+      ),
       body: Container(
-        // background
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
@@ -56,12 +44,9 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ),
         child: SingleChildScrollView(
-          // translucent box foreground
           child: Container(
             width: MediaQuery.of(context).size.width,
-            padding: EdgeInsets.only(
-              bottom: 20,
-            ),
+            height: MediaQuery.of(context).size.height,
             margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0.0),
             decoration: BoxDecoration(
               color: Color(0x99EDF9F8),
@@ -70,7 +55,7 @@ class _MainScreenState extends State<MainScreen> {
               ),
             ),
 
-            // put widgets as children of Container here for navbar testing
+            // put widgets here for navbar testing
 
             // use next line to test navbar functionality
             child: _views.elementAt(_selectedIndex),
