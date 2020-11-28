@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 
-import 'MainScreen.dart';
+import './SplashScreen.dart';
 
 import 'SplashScreen.dart';
 
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
               accentColor: Color(0xFFA0E7E5),
               visualDensity: VisualDensity.adaptivePlatformDensity,
             ),
-            home: MainScreen());
+            home: SplashScreen());
         }
       },
     );
