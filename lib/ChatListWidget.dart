@@ -53,7 +53,25 @@ class ChatListWidget extends StatelessWidget {
                       backgroundColor: Colors.white,
                       radius: 30,
                     ),
-                    Text('Monika'),
+                    Container(
+                      padding: EdgeInsets.only(
+                        left: 20,
+                      ),
+                      child: Column(
+                        children: [
+                          Text(
+                            'Monika',
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Theme.of(context).primaryColor,
+                            ),
+                          ),
+                          Text(
+                            'You: Hi Monika!',
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -70,7 +88,25 @@ class ChatListWidget extends StatelessWidget {
                       backgroundColor: Colors.white,
                       radius: 30,
                     ),
-                    Text('Sayori'),
+                    Container(
+                      padding: EdgeInsets.only(
+                        left: 20,
+                      ),
+                      child: Column(
+                        children: [
+                          Text(
+                            'Sayori',
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Theme.of(context).primaryColor,
+                            ),
+                          ),
+                          Text(
+                            'You: Hi Monika!',
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -87,7 +123,25 @@ class ChatListWidget extends StatelessWidget {
                       backgroundColor: Colors.white,
                       radius: 30,
                     ),
-                    Text('Monika'),
+                    Container(
+                      padding: EdgeInsets.only(
+                        left: 20,
+                      ),
+                      child: Column(
+                        children: [
+                          Text(
+                            'Monika',
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Theme.of(context).primaryColor,
+                            ),
+                          ),
+                          Text(
+                            'You: Hi Monika!',
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -104,7 +158,25 @@ class ChatListWidget extends StatelessWidget {
                       backgroundColor: Colors.white,
                       radius: 30,
                     ),
-                    Text('Sayori'),
+                    Container(
+                      padding: EdgeInsets.only(
+                        left: 20,
+                      ),
+                      child: Column(
+                        children: [
+                          Text(
+                            'Sayori',
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Theme.of(context).primaryColor,
+                            ),
+                          ),
+                          Text(
+                            'You: Hi Monika!',
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -121,24 +193,25 @@ class ChatListWidget extends StatelessWidget {
                       backgroundColor: Colors.white,
                       radius: 30,
                     ),
-                    Text('Monika'),
-                  ],
-                ),
-              ),
-              Divider(),
-              Container( // each Container is a chat
-                margin: EdgeInsets.only(
-                  top: 5,
-                  bottom: 5,
-                ),
-                child: Row(
-                  children: [
-                    CircleAvatar(
-                      backgroundImage: AssetImage('assets/images/sayori.png'),
-                      backgroundColor: Colors.white,
-                      radius: 30,
+                    Container(
+                      padding: EdgeInsets.only(
+                        left: 20,
+                      ),
+                      child: Column(
+                        children: [
+                          Text(
+                            'Monika',
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Theme.of(context).primaryColor,
+                            ),
+                          ),
+                          Text(
+                            'You: Hi Monika!',
+                          ),
+                        ],
+                      ),
                     ),
-                    Text('Sayori'),
                   ],
                 ),
               ),
