@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "479723465791",
+    "firebase_url": "https://akay-1e66a.firebaseio.com",
+    "project_id": "akay-1e66a",
+    "storage_bucket": "akay-1e66a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479723465791:android:80ac9bcb892da9f3ce1c8a",
+        "android_client_info": {
+          "package_name": "com.example.HackFest2020"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "479723465791-7qkq11g2ubb4ndo07orauec2e3185jl5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS_tgUvais50MUWLDoBCBeKW19mgQ4H5I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "479723465791-7qkq11g2ubb4ndo07orauec2e3185jl5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
