@@ -6,6 +6,7 @@ import './MentorFindPage.dart';
 import './MenteeFindPage.dart';
 import './ProfileWidget.dart';
 import './SettingsScreen.dart';
+import './ChatListWidget.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -18,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
     ProfileWidget(),
     MentorsFindPage(),
     MenteeFindPage(),
-    Text('Chat'),
+    ChatListWidget(),
   ];
 
   void _onNavItemTapped(int index) {
