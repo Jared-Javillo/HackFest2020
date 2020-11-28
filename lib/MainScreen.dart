@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:Akay/FindMenteeWidget.dart';
 import 'package:flutter/material.dart';
 
 import './FindMentorWidget.dart';
@@ -15,8 +16,8 @@ class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
   List<Widget> _views = <Widget>[
     ProfileWidget(),
-    FindMentorWidget(),
-    Text('Find Mentee'),
+    Text('Under Construction'),
+    Text('Under Construction'),
     Text('Chat'),
   ];
 

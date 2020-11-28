@@ -1,6 +1,21 @@
 import 'package:flutter/material.dart';
 
-class FindMenteeWidget extends StatelessWidget {
+class FindMenteeWidget extends StatefulWidget {
+  final String name;
+  final String username;
+  final String learn;
+  final String bio;
+  final String bio2;
+  final String imageLoc;
+
+  FindMenteeWidget(
+      this.name, this.username, this.learn, this.bio, this.bio2, this.imageLoc);
+
+  @override
+  _FindMenteeWidgetState createState() => _FindMenteeWidgetState();
+}
+
+class _FindMenteeWidgetState extends State<FindMenteeWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,7 +37,7 @@ class FindMenteeWidget extends StatelessWidget {
                 )
               ]),
           child: Image(
-            image: AssetImage('assets/images/sayori.png'),
+            image: AssetImage(widget.imageLoc),
             width: 190,
             height: 190,
           ),
@@ -35,14 +50,15 @@ class FindMenteeWidget extends StatelessWidget {
           ),
         ),
         Text(
-          'Sayori',
+          widget.name,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 35,
             color: Theme.of(context).primaryColor,
           ),
         ),
-        Container( // short info line
+        Container(
+          // short info line
           width: MediaQuery.of(context).size.width * 0.8,
           alignment: Alignment.center,
           margin: EdgeInsets.only(
@@ -57,13 +73,14 @@ class FindMenteeWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(
-            'Hi! I like LEARNING math. Hit me up :)',
+            'Hi! I like LEARNING ' + widget.learn,
             style: TextStyle(
               fontSize: 16,
             ),
           ),
         ),
-        Container( // short info line
+        Container(
+          // short info line
           width: MediaQuery.of(context).size.width * 0.8,
           alignment: Alignment.center,
           margin: EdgeInsets.only(
@@ -78,13 +95,14 @@ class FindMenteeWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(
-            'I love anime! OwO',
+            widget.bio,
             style: TextStyle(
               fontSize: 16,
             ),
           ),
         ),
-        Container( // short info line
+        Container(
+          // short info line
           width: MediaQuery.of(context).size.width * 0.8,
           alignment: Alignment.center,
           margin: EdgeInsets.only(
@@ -99,13 +117,14 @@ class FindMenteeWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(
-            'Lorem ipsum dolor sit amet',
+            widget.bio2,
             style: TextStyle(
               fontSize: 16,
             ),
           ),
         ),
-        Container( // short info line
+        Container(
+          // short info line
           width: MediaQuery.of(context).size.width * 0.8,
           alignment: Alignment.center,
           margin: EdgeInsets.only(

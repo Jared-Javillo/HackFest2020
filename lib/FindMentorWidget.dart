@@ -1,7 +1,22 @@
 import 'package:flutter/material.dart';
 import 'starRating.dart';
 
-class FindMentorWidget extends StatelessWidget {
+class FindMentorWidget extends StatefulWidget {
+  final String name;
+  final String username;
+  final String teach;
+  final String bio;
+  final String bio2;
+  final String imageLoc;
+
+  FindMentorWidget(
+      this.name, this.username, this.teach, this.bio, this.bio2, this.imageLoc);
+
+  @override
+  _FindMentorWidgetState createState() => _FindMentorWidgetState();
+}
+
+class _FindMentorWidgetState extends State<FindMentorWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,7 +38,7 @@ class FindMentorWidget extends StatelessWidget {
                 )
               ]),
           child: Image(
-            image: AssetImage('assets/images/monika.png'),
+            image: AssetImage(widget.imageLoc),
             width: 190,
             height: 190,
           ),
@@ -36,7 +51,7 @@ class FindMentorWidget extends StatelessWidget {
           ),
         ),
         Text(
-          'Monika',
+          widget.name,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 35,
@@ -44,7 +59,8 @@ class FindMentorWidget extends StatelessWidget {
           ),
         ),
         StarDisplay(value: 3),
-        Container( // short info lines
+        Container(
+          // short info lines
           width: MediaQuery.of(context).size.width * 0.8,
           alignment: Alignment.center,
           margin: EdgeInsets.only(
@@ -59,13 +75,14 @@ class FindMentorWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(
-            'Hi! I like teaching math. Hit me up :)',
+            'Hi! I like teaching ' + widget.teach,
             style: TextStyle(
               fontSize: 16,
             ),
           ),
         ),
-        Container( // short info lines
+        Container(
+          // short info lines
           width: MediaQuery.of(context).size.width * 0.8,
           alignment: Alignment.center,
           margin: EdgeInsets.only(
@@ -80,13 +97,14 @@ class FindMentorWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(
-            'I love anime! OwO',
+            widget.bio,
             style: TextStyle(
               fontSize: 16,
             ),
           ),
         ),
-        Container( // short info lines
+        Container(
+          // short info lines
           width: MediaQuery.of(context).size.width * 0.8,
           alignment: Alignment.center,
           margin: EdgeInsets.only(
@@ -101,13 +119,14 @@ class FindMentorWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(
-            'Lorem ipsum dolor sit amet',
+            widget.bio2,
             style: TextStyle(
               fontSize: 16,
             ),
           ),
         ),
-        Container( // short info lines
+        Container(
+          // short info lines
           width: MediaQuery.of(context).size.width * 0.8,
           alignment: Alignment.center,
           margin: EdgeInsets.only(
