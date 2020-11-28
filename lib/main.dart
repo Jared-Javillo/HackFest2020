@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 
-import './SplashScreen.dart';
+import 'MainScreen.dart';
+
+import 'SplashScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,12 +27,14 @@ class MyApp extends StatelessWidget {
 
         if (snapshot.connectionState == ConnectionState.done){
           return MaterialApp(
-            title: 'Minecraft Worlds',
+            title: 'Akay',
             theme: ThemeData(
-              primarySwatch: Colors.teal,
+              fontFamily: 'RedHatDisplay',
+              primaryColor: Color(0xFF1D6260),
+              accentColor: Color(0xFFA0E7E5),
               visualDensity: VisualDensity.adaptivePlatformDensity,
             ),
-            home: SplashScreen());
+            home: MainScreen());
         }
       },
     );
