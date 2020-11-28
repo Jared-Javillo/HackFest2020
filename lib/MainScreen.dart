@@ -7,6 +7,7 @@ import 'ProfileWidget.dart';
 import 'FindMentorWidget.dart';
 import 'FindMenteeWidget.dart';
 import 'ChatListWidget.dart';
+import 'MenuWidget.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -22,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
     ChatListWidget(),
   ];
 
-  void _onNavItemTapped(int index) {
+  void _changeState(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -32,7 +33,12 @@ class _MainScreenState extends State<MainScreen> {
     FloatingActionButton fab;
     if (index != 3) {
       fab = FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MenuWidget()),
+          );
+        },
         elevation: 0,
         mini: true,
         child: Icon(Icons.menu),
@@ -79,7 +85,7 @@ class _MainScreenState extends State<MainScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
-        onTap: _onNavItemTapped,
+        onTap: _changeState,
         iconSize: 35,
         selectedItemColor: Color(0xFFA0E7E5),
         unselectedItemColor: Color(0xFFC4C4C4),
