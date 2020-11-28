@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'starRating.dart';
 
-class FindMentorWidget extends StatelessWidget {
+class FindMenteeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,7 +22,7 @@ class FindMentorWidget extends StatelessWidget {
                 )
               ]),
           child: Image(
-            image: AssetImage('assets/images/monika.png'),
+            image: AssetImage('assets/images/sayori.png'),
             width: 190,
             height: 190,
           ),
@@ -36,14 +35,13 @@ class FindMentorWidget extends StatelessWidget {
           ),
         ),
         Text(
-          'Monika',
+          'Sayori',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 35,
             color: Theme.of(context).primaryColor,
           ),
         ),
-        StarDisplay(value: 3),
         Container( // short info line
           width: MediaQuery.of(context).size.width * 0.8,
           alignment: Alignment.center,
@@ -59,90 +57,7 @@ class FindMentorWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(
-            'Hi! I like teaching math. Hit me up :)',
-            style: TextStyle(
-              fontSize: 16,
-            ),
-          ),
-        ),
-        Container( // short info line
-          width: MediaQuery.of(context).size.width * 0.8,
-          alignment: Alignment.center,
-          margin: EdgeInsets.only(
-            top: 10,
-            bottom: 5,
-          ),
-          padding: EdgeInsets.symmetric(
-            vertical: 10,
-          ),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Text(
-            'I love anime! OwO',
-            style: TextStyle(
-              fontSize: 16,
-            ),
-          ),
-        ),
-        Container( // short info line
-          width: MediaQuery.of(context).size.width * 0.8,
-          alignment: Alignment.center,
-          margin: EdgeInsets.only(
-            top: 10,
-            bottom: 5,
-          ),
-          padding: EdgeInsets.symmetric(
-            vertical: 10,
-          ),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Text(
-            'Lorem ipsum dolor sit amet',
-            style: TextStyle(
-              fontSize: 16,
-            ),
-          ),
-        ),
-        Container( // short info line
-          width: MediaQuery.of(context).size.width * 0.8,
-          alignment: Alignment.center,
-          margin: EdgeInsets.only(
-            top: 10,
-            bottom: 5,
-          ),
-          padding: EdgeInsets.symmetric(
-            vertical: 10,
-          ),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Text(
-            'consectetur adipiscing elit',
-            style: TextStyle(
-              fontSize: 16,
-            ),
-          ),
-        ),Container( // short info line
-          width: MediaQuery.of(context).size.width * 0.8,
-          alignment: Alignment.center,
-          margin: EdgeInsets.only(
-            top: 10,
-            bottom: 5,
-          ),
-          padding: EdgeInsets.symmetric(
-            vertical: 10,
-          ),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Text(
-            'Hi! I like teaching math. Hit me up :)',
+            'Hi! I like LEARNING math. Hit me up :)',
             style: TextStyle(
               fontSize: 16,
             ),
