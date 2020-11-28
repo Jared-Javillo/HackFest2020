@@ -2,7 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import './FindMentorWidget.dart';
+import './MentorFindPage.dart';
+import './MenteeFindPage.dart';
 import './ProfileWidget.dart';
 import './SettingsScreen.dart';
 
@@ -15,8 +16,8 @@ class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
   List<Widget> _views = <Widget>[
     ProfileWidget(),
-    FindMentorWidget(),
-    Text('Find Mentee'),
+    MentorsFindPage(),
+    MenteeFindPage(),
     Text('Chat'),
   ];
 
