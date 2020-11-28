@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import './ChatListWidget.dart';
+import './FindMenteeWidget.dart';
 import './FindMentorWidget.dart';
 import './ProfileWidget.dart';
 import './SettingsScreen.dart';
@@ -16,11 +18,11 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> _views = <Widget>[
     ProfileWidget(),
     FindMentorWidget(),
-    Text('Find Mentee'),
-    Text('Chat'),
+    FindMenteeWidget(),
+    ChatListWidget(),
   ];
 
-  void _onNavItemTapped(int index) {
+  void _changeState(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -51,7 +53,9 @@ class _MainScreenState extends State<MainScreen> {
         child: SingleChildScrollView(
           child: Container(
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
+            padding: EdgeInsets.only(
+              bottom: 20,
+            ),
             margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0.0),
             decoration: BoxDecoration(
               color: Color(0x99EDF9F8),
@@ -69,8 +73,8 @@ class _MainScreenState extends State<MainScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
-        onTap: _onNavItemTapped,
-        iconSize: 35,
+        onTap: _changeState,
+        iconSize: 30,
         selectedItemColor: Color(0xFFA0E7E5),
         unselectedItemColor: Color(0xFFC4C4C4),
         items: const <BottomNavigationBarItem>[
