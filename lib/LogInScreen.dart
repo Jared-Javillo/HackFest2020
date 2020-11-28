@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 import './MainScreen.dart';
 
@@ -11,6 +12,19 @@ class LogInScreen extends StatefulWidget {
 }
 
 class _LogInScreenState extends State<LogInScreen> {
+  
+  final getUsername = TextEditingController();
+  final getPassword = TextEditingController();
+
+  var authHandler = new Auth();
+
+  @override
+  void dispose(){
+    getUsername.dispose();
+    getPassword.dispose();
+    super.dispose();
+  }
+// Code for login starts at line 89 and code for create user is at line 117
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context);
@@ -52,6 +66,7 @@ class _LogInScreenState extends State<LogInScreen> {
                         color: Color(0xFF1D6260),
                       ),
                     ),
+                    controller: getUsername,
                   ),
                 ),
                 Container(
@@ -67,18 +82,26 @@ class _LogInScreenState extends State<LogInScreen> {
                         color: Color(0xFF1D6260),
                       ),
                     ),
+                    controller: getPassword,
                   ),
                 ),
-                Container(
+
+                Container( 
                   width: ScreenUtil().setWidth(800),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(primary: Color(0xFFA0E7E5)),
                     onPressed: () {
-                      Navigator.pop(context);
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => MainScreen()));
+                        authHandler.handleSignInEmail(getUsername.text, getPassword.text)
+                        .then((FirebaseUser user){
+                          Navigator.pop(context);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MainScreen()
+                            )
+                          );
+                        }
+                      );
                     },
                     child: Text(
                       "LOG IN",
@@ -90,6 +113,36 @@ class _LogInScreenState extends State<LogInScreen> {
                     ),
                   ),
                 ),
+                
+                Container(
+                  width: ScreenUtil().setWidth(800),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(primary: Color(0xFFA0E7E5)),
+                    onPressed: () {
+                        authHandler.handleCreateAccount(getUsername.text, getPassword.text)
+                        .then((FirebaseUser user){
+                          Navigator.pop(context);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MainScreen()
+                            )
+                          );
+                        }
+                      );
+                    },
+                    child: Text(
+                      "CREATE USER",
+                      style: TextStyle(
+                        fontSize: ScreenUtil().setSp(60),
+                        fontFamily: "RedHatFamily",
+                        color: Color(0xFF1D6260),
+                      ),
+                    ),
+                  ),
+                ),
+
+
                 Container(
                   height: ScreenUtil().setHeight(50),
                   width: ScreenUtil().setWidth(800),
@@ -103,6 +156,7 @@ class _LogInScreenState extends State<LogInScreen> {
                     ),
                   ),
                 ),
+                
                 Container(
                   width: ScreenUtil().setWidth(800),
                   height: ScreenUtil().setHeight(50),
@@ -122,6 +176,26 @@ class _LogInScreenState extends State<LogInScreen> {
         ),
       ),
     );
+  }
+}
+
+class Auth {
+  final FirebaseAuth auth = FirebaseAuth.instance;
+
+  Future<FirebaseUser> handleSignInEmail(String email, String password) async {
+    FirebaseUser user = (await auth.signInWithEmailAndPassword(email: email, password: password)).user;
+
+    print('signInEmail succeeded: $user');
+
+    return user;
+  }
+
+  Future<FirebaseUser> handleCreateAccount(String email, String password) async {
+    FirebaseUser user = (await auth.createUserWithEmailAndPassword(email: email, password: password)).user;
+
+    print('created account');
+
+    return user;
   }
 }
 
