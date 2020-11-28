@@ -1,5 +1,9 @@
-import 'package:flutter/material.dart';
+import 'dart:ui';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter/material.dart';
+
+import './MainScreen.dart';
 
 class SettingsScreen extends StatefulWidget {
   @override
@@ -7,24 +11,9 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  int _selectedIndex = 0;
-  void _onNavItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context);
     return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        elevation: 0,
-        mini: true,
-        child: Icon(Icons.menu),
-      ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -33,58 +22,169 @@ class _SettingsScreenState extends State<SettingsScreen> {
             colors: [Color(0xFFFBE7C6), Color(0xFFCDFADB), Color(0xFF1D6260)],
           ),
         ),
-        child: Column(
-          children: [
-            Container(
-              child: Row(
-                children: <Widget>[
-                  Image(
-                    image: AssetImage('assets/images/akay_logo'),
+        child: SingleChildScrollView(
+          child: Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0.0),
+            decoration: BoxDecoration(
+              color: Color(0x99EDF9F8),
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(10.0),
+              ),
+            ),
+            child: Column(
+              children: [
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MainScreen()));
+                    },
+                    child: Icon(
+                      Icons.arrow_back_ios_outlined,
+                    ),
                   ),
-                  Column(
-                    children: [
-                      Text("Monika"),
-                      Text("@Monika"),
+                ),
+                Container(
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        // DP frame
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(6),
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Color(0xFFCFCFCF),
+                                spreadRadius: 3,
+                                blurRadius: 7,
+                              )
+                            ]),
+                        child: Image(
+                          image: AssetImage('assets/images/monika.png'),
+                          width: ScreenUtil().setWidth(200.0),
+                          height: ScreenUtil().setHeight(200.0),
+                        ),
+                      ),
+                      SizedBox(width: ScreenUtil().setWidth(30)),
+                      Column(
+                        children: [
+                          Text(
+                            'Monika',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: ScreenUtil().setSp(98),
+                              color: Theme.of(context).primaryColor,
+                            ),
+                          ),
+                          Text(
+                            '@ddlcmonika',
+                            style: TextStyle(
+                              fontSize: ScreenUtil().setSp(63),
+                              color: Theme.of(context).primaryColor,
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
-                ],
-              ),
+                ),
+                Divider(
+                  color: Theme.of(context).primaryColor,
+                  thickness: 4,
+                ),
+                Container(
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Account Settings",
+                      style: TextStyle(
+                        fontSize: ScreenUtil().setSp(70),
+                        color: Theme.of(context).primaryColor,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Your Profile",
+                      style: TextStyle(
+                        fontSize: ScreenUtil().setSp(70),
+                        color: Theme.of(context).primaryColor,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Your Mentors",
+                      style: TextStyle(
+                        fontSize: ScreenUtil().setSp(70),
+                        color: Theme.of(context).primaryColor,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Your Mentees",
+                      style: TextStyle(
+                        fontSize: ScreenUtil().setSp(70),
+                        color: Theme.of(context).primaryColor,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Notifications",
+                      style: TextStyle(
+                        fontSize: ScreenUtil().setSp(70),
+                        color: Theme.of(context).primaryColor,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Report A Problem",
+                      style: TextStyle(
+                        fontSize: ScreenUtil().setSp(70),
+                        color: Theme.of(context).primaryColor,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Log Out",
+                      style: TextStyle(
+                        fontSize: ScreenUtil().setSp(70),
+                        color: Theme.of(context).primaryColor,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-            Container(
-              child: TextButton(
-                onPressed: null,
-                child: Text("yo"),
-              ),
-            ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: SizedBox(
-        height: ScreenUtil().setHeight(140),
-        child: BottomNavigationBar(
-          currentIndex: _selectedIndex,
-          onTap: _onNavItemTapped,
-          iconSize: ScreenUtil().setSp(60),
-          selectedItemColor: Color(0xFFA0E7E5),
-          unselectedItemColor: Color(0xFFC4C4C4),
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Profile',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.menu_book),
-              label: 'Find a Mentor',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.category),
-              label: 'Find a Mentee',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.mail),
-              label: 'Chat',
-            ),
-          ],
+          ),
         ),
       ),
     );

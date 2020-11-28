@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import './FindMentorWidget.dart';
 import './ProfileWidget.dart';
+import './SettingsScreen.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -30,7 +31,11 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pop(context);
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => SettingsScreen()));
+        },
         elevation: 0,
         mini: true,
         child: Icon(Icons.menu),
