@@ -65,7 +65,7 @@ class ProfileWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(10.0),
           ),
           child: Text(
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            'Hi my name is Craig and I work as a tutor on the side when I am not teaching Theology and Literature in University. I can definitely help you with those areas in your studies and I can also give you some sick advice about keeping your beard in check!',
             style: TextStyle(
               fontSize: ScreenUtil().setSp(49),
             ),
