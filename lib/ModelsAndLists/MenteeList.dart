@@ -1,4 +1,4 @@
-import './FindMenteeWidget.dart';
+import '../Widgets/FindMenteeWidget.dart';
 
 List<FindMenteeWidget> mentees = [
   FindMenteeWidget("Monika", "@ddlcmonika", "Intelligent AI",

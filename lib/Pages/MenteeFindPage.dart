@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tindercard/flutter_tindercard.dart';
 
-import './MenteeList.dart';
+import '../ModelsAndLists/MenteeList.dart';
 
 class MenteeFindPage extends StatefulWidget {
   @override

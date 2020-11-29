@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'starRating.dart';
+import './StarRating.dart';
 
 class FindMenteeWidget extends StatefulWidget {
   final String name;

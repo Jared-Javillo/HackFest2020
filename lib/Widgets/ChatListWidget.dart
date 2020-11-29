@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Akay/MessageModel.dart';
+import '../ModelsAndLists/MessageModel.dart';
 
 class ChatListWidget extends StatelessWidget {
   @override

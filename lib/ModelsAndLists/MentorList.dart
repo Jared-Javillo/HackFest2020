@@ -1,4 +1,4 @@
-import './FindMentorWidget.dart';
+import '../Widgets/FindMentorWidget.dart';
 
 List<FindMentorWidget> mentors = [
   FindMentorWidget("Monika", "@ddlcmonika", "Mathematics", "I like Anime UwU",

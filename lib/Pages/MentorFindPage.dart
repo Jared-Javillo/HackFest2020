@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tindercard/flutter_tindercard.dart';
 
-import './MentorList.dart';
+import '../ModelsAndLists/MentorList.dart';
 
 class MentorsFindPage extends StatefulWidget {
   @override

@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 import './MentorFindPage.dart';
 import './MenteeFindPage.dart';
-import './ProfileWidget.dart';
+import '../Widgets/ProfileWidget.dart';
 import './SettingsScreen.dart';
-import './ChatListWidget.dart';
+import '../Widgets/ChatListWidget.dart';
 
 class MainScreen extends StatefulWidget {
   @override

@@ -1,9 +1,8 @@
-import 'package:Akay/UserModel.dart';
+import './UserModel.dart';
 
 class Message {
   final User sender;
-  final String
-      time;
+  final String time;
   final String text;
   final bool unread;
 
@@ -22,23 +21,14 @@ final User currentUser = User(
   imageUrl: 'assets/images/monika.png',
 );
 
-final User monika = User(
-  id: 1,
-  name: 'Monika',
-  imageUrl: 'assets/images/monika.png'
-);
+final User monika =
+    User(id: 1, name: 'Monika', imageUrl: 'assets/images/monika.png');
 
-final User sayori = User(
-  id: 2,
-  name: 'Sayori',
-  imageUrl: 'assets/images/sayori.png'
-);
+final User sayori =
+    User(id: 2, name: 'Sayori', imageUrl: 'assets/images/sayori.png');
 
-final User akay = User(
-  id: 3,
-  name: 'Akay Admin',
-  imageUrl: 'assets/images/akay_logo.png'
-);
+final User akay =
+    User(id: 3, name: 'Akay Admin', imageUrl: 'assets/images/akay_logo.png');
 
 //CHATS
 
