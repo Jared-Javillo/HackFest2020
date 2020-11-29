@@ -42,7 +42,7 @@ class _MainScreenState extends State<MainScreen> {
         mini: true,
         child: Icon(Icons.menu),
       ),
-      body: Container(
+      body: Container( // gradient background
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
@@ -61,7 +61,7 @@ class _MainScreenState extends State<MainScreen> {
                 top: Radius.circular(10.0),
               ),
             ),
-            child: _views.elementAt(_selectedIndex),
+            child: _views.elementAt(_selectedIndex), //shows widget according to bottomnavbar
           ),
         ),
       ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
 import './MainScreen.dart';
 
@@ -48,7 +47,6 @@ class _LogInScreenState extends State<LogInScreen> {
                       hintText: "Username",
                       hintStyle: TextStyle(
                         fontSize: ScreenUtil().setSp(60),
-                        fontFamily: "RedHatFamily",
                         color: Color(0xFF1D6260),
                       ),
                     ),
@@ -63,7 +61,6 @@ class _LogInScreenState extends State<LogInScreen> {
                       hintText: "Password",
                       hintStyle: TextStyle(
                         fontSize: ScreenUtil().setSp(60),
-                        fontFamily: "RedHatFamily",
                         color: Color(0xFF1D6260),
                       ),
                     ),
@@ -71,6 +68,9 @@ class _LogInScreenState extends State<LogInScreen> {
                 ),
                 Container(
                   width: ScreenUtil().setWidth(800),
+                  margin: EdgeInsets.only(
+                    top: 20,
+                  ),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(primary: Color(0xFFA0E7E5)),
                     onPressed: () {
@@ -84,21 +84,23 @@ class _LogInScreenState extends State<LogInScreen> {
                       "LOG IN",
                       style: TextStyle(
                         fontSize: ScreenUtil().setSp(60),
-                        fontFamily: "RedHatFamily",
+                        fontWeight: FontWeight.bold,
                         color: Color(0xFF1D6260),
                       ),
                     ),
                   ),
                 ),
                 Container(
-                  height: ScreenUtil().setHeight(50),
+                  height: ScreenUtil().setHeight(60),
                   width: ScreenUtil().setWidth(800),
+                  margin: EdgeInsets.only(
+                    bottom: 30,
+                  ),
                   alignment: Alignment.bottomCenter,
                   child: Text(
                     "Create an Account",
                     style: TextStyle(
                       fontSize: ScreenUtil().setSp(50),
-                      fontFamily: "RedHatFamily",
                       color: Colors.white,
                     ),
                   ),
@@ -111,7 +113,6 @@ class _LogInScreenState extends State<LogInScreen> {
                     "Copyright © 2020 by 3rd Years.",
                     style: TextStyle(
                       fontSize: ScreenUtil().setSp(30),
-                      fontFamily: "RedHatFamily",
                       color: Colors.white,
                     ),
                   ),

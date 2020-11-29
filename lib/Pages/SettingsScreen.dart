@@ -22,7 +22,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
             colors: [Color(0xFFFBE7C6), Color(0xFFCDFADB), Color(0xFF1D6260)],
           ),
         ),
-        child: SingleChildScrollView(
           child: Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
@@ -51,6 +50,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                 ),
                 Container(
+                  margin: EdgeInsets.only(
+                    left: 30,
+                    bottom: 10,
+                  ),
                   child: Row(
                     children: <Widget>[
                       Container(
@@ -186,7 +189,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
           ),
         ),
-      ),
     );
   }
 }
