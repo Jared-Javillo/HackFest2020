@@ -25,13 +25,13 @@ class ProfileWidget extends StatelessWidget {
                 )
               ]),
           child: Image(
-            image: AssetImage('assets/images/monika.png'),
+            image: AssetImage('assets/images/craig.jpg'),
             width: ScreenUtil().setWidth(400),
             height: ScreenUtil().setHeight(400),
           ),
         ),
         Text(
-          'Monika',
+          'Craig',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: ScreenUtil().setSp(98),
@@ -39,7 +39,7 @@ class ProfileWidget extends StatelessWidget {
           ),
         ),
         Text(
-          '@ddlcmonika',
+          '@DaBeard',
           style: TextStyle(
             fontSize: ScreenUtil().setSp(63),
             color: Theme.of(context).primaryColor,
@@ -165,7 +165,7 @@ class ProfileWidget extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Simping',
+                            'Beard Keeping',
                             style: TextStyle(
                               fontSize: ScreenUtil().setSp(49),
                             ),

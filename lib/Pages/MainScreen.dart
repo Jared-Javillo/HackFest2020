@@ -61,10 +61,6 @@ class _MainScreenState extends State<MainScreen> {
                 top: Radius.circular(10.0),
               ),
             ),
-
-            // put widgets here for navbar testing
-
-            // use next line to test navbar functionality
             child: _views.elementAt(_selectedIndex),
           ),
         ),
