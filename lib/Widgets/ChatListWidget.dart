@@ -20,7 +20,7 @@ class ChatListWidget extends StatelessWidget {
                   bottom: 10,
                 ),
                 child: CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/monika.png'),
+                  backgroundImage: AssetImage('assets/images/craig.jpg'),
                   backgroundColor: Colors.white,
                   radius: 40,
                 ),

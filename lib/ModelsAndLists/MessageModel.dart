@@ -18,37 +18,46 @@ class Message {
 final User currentUser = User(
   id: 0,
   name: 'Current User',
-  imageUrl: 'assets/images/monika.png',
+  imageUrl: 'assets/images/craig.jpg',
 );
 
-final User monika =
-    User(id: 1, name: 'Monika', imageUrl: 'assets/images/monika.png');
+final User ingrid = User(
+  id: 1,
+  name: 'Ingrid',
+  imageUrl: 'assets/images/ingrid.jpg',
+);
 
-final User sayori =
-    User(id: 2, name: 'Sayori', imageUrl: 'assets/images/sayori.png');
+final User isabella = User(
+  id: 2,
+  name: 'Isabella',
+  imageUrl: 'assets/images/isabella.jpeg',
+);
 
-final User akay =
-    User(id: 3, name: 'Akay Admin', imageUrl: 'assets/images/akay_logo.png');
+final User juan = User(
+  id: 3,
+  name: 'Juan',
+  imageUrl: 'assets/images/juan.jpg',
+);
 
 //CHATS
 
 List<Message> chats = [
   Message(
-    sender: monika,
+    sender: ingrid,
     time: "6:30 PM",
-    text: 'You fucking simp, shut the fucc up!',
+    text: 'God??',
     unread: true,
   ),
   Message(
-    sender: akay,
+    sender: isabella,
     time: "6:01 PM",
-    text: 'Finish ur damn views !! LMAO',
+    text: 'sincos * cossin',
     unread: false,
   ),
   Message(
-    sender: sayori,
+    sender: juan,
     time: '4:20 PM',
-    text: 'Nekopara vol.4 IS OUT',
+    text: 'Visual Code > Android Studio',
     unread: false,
   )
 ];
